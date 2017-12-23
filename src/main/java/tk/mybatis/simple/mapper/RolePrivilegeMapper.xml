@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="tk.mybatis.simple.mapper.RolePrivilegeMapper">  
+   
+</mapper>
+
+
+
+
+
+  <!-- <resultMap type="Message" id="MessageResult">
+    <id column="ID" jdbcType="INTEGER" property="id"/>
+    <result column="COMMAND" jdbcType="VARCHAR" property="command"/>
+    <result column="DESCRIPTION" jdbcType="VARCHAR" property="description"/>
+    <result column="CONTENT" jdbcType="VARCHAR" property="content"/>
+  </resultMap> -->
+  
+<!--  <select id="version" parameterType="long" resultType="int">
+    SELECT version FROM user WHERE id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <delete id="delete" parameterType="UserAlias">
+    DELETE FROM user WHERE id = #{id:INTEGER}
+  </delete>
+
+  <insert id="insert" parameterType="UserAlias" useGeneratedKeys="false">
+    INSERT INTO user
+    ( id,
+    username,
+    password,
+    administrator
+    )
+    VALUES
+    ( #{id},
+    #{username,jdbcType=VARCHAR},
+    #{password.encrypted:VARCHAR},
+    #{administrator,jdbcType=BOOLEAN}
+    )
+  </insert>
+
+  <update id="update" parameterType="UserAlias">
+    UPDATE user SET
+    username = #{username,jdbcType=VARCHAR},
+    password = #{password.encrypted,jdbcType=VARCHAR},
+    administrator = #{administrator,jdbcType=BOOLEAN}
+    WHERE
+    id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="isUniqueUsername" parameterType="map" resultType="boolean">
+    SELECT (count(*) = 0)
+    FROM user
+    WHERE ((#{userId,jdbcType=BIGINT} IS NOT NULL AND id != #{userId,jdbcType=BIGINT}) OR #{userId,jdbcType=BIGINT} IS
+    NULL)
+    AND (username = #{username,jdbcType=VARCHAR})
+  </select>-->

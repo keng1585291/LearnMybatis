@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+  <settings>
+    <setting name="logImpl" value="LOG4J"/>
+    <setting name="mapUnderscoreToCamelCase" value="true"/>
+  </settings>
+  
+  <typeAliases>
+      <!-- 确定一个类一般需要全限定名称，通过package配置，可以省略包名，直接使用类名 -->
+       <!-- <package name="tk.mybatis.simple.model"/> -->
+       <package name="tk.mybatis.simple.mapper"/>
+      <!--<typeAlias type="tk.mybatis.simple.model.Country" alias="Country"/>-->
+  </typeAliases>
+
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC">
+        <property name="" value=""/>
+      </transactionManager>
+      <dataSource type="UNPOOLED">
+        <property name="driver" value="com.mysql.jdbc.Driver"/><!-- 此处须注意大小写区分 -->
+        <property name="url" value="jdbc:mysql://localhost:3306/db_mybatis_book"/>
+        <property name="username" value="root"/>
+        <property name="password" value="123456"/>
+      </dataSource>
+    </environment>
+  </environments>
+
+  <mappers>
+    <mapper resource="tk/mybatis/simple/mapper/CountryMapper.xml"/>
+    <mapper resource="tk/mybatis/simple/mapper/PrivilegeMapper.xml"/>
+    <mapper resource="tk/mybatis/simple/mapper/RoleMapper.xml"/>
+    <mapper resource="tk/mybatis/simple/mapper/RolePrivilegeMapper.xml"/>
+    <mapper resource="tk/mybatis/simple/mapper/UserMapper.xml"/>
+    <mapper resource="tk/mybatis/simple/mapper/UserRoleMapper.xml"/>
+  </mappers>
+
+</configuration>
