@@ -41,7 +41,7 @@
     #{administrator,jdbcType=BOOLEAN}
     )
   </insert>
-
+  
   <update id="update" parameterType="UserAlias">
     UPDATE user SET
     username = #{username,jdbcType=VARCHAR},
